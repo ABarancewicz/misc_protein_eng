@@ -13,6 +13,7 @@ import os
 # pdb_dir: input pdbs
 # output_dir: chai results
 # processed_dir: move processed pdbs to here
+# scores saved in results.txt
 
 # Note: Currently using cuda device 1
 # Note: Currently using msa server
