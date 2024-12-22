@@ -9,8 +9,7 @@ import sys
 import os
 import torch
 
-device = torch.device("cuda:1")
-torch.cuda.set_device(device)  # Set default device
+os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 
 ### Script to run Chai prediction on directory of pdbs
 # Usage: chai_pdb_dir.py <pdb_dir> <output_dir> <processed_dir>
@@ -63,7 +62,7 @@ def run_chai_prediction(fasta_path, output_dir):
         num_trunk_recycles=3,
         num_diffn_timesteps=200,
         seed=42,
-        device="cuda:1",
+        device="cuda:0",
         use_esm_embeddings=True,
         use_msa_server=True,
     )
