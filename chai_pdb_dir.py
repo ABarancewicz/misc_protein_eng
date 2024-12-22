@@ -59,12 +59,13 @@ def run_chai_prediction(fasta_path, output_dir):
     candidates = run_inference(
         fasta_file=fasta_path,
         output_dir=output_dir,
-        num_trunk_recycles=3,
-        num_diffn_timesteps=200,
+        num_trunk_recycles=2,
+        num_diffn_timesteps=150,
         seed=42,
         device="cuda:0",
         use_esm_embeddings=True,
         use_msa_server=True,
+        batch_size=1
     )
     return candidates
 
