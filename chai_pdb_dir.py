@@ -65,7 +65,6 @@ def run_chai_prediction(fasta_path, output_dir):
         device="cuda:0",
         use_esm_embeddings=True,
         use_msa_server=True,
-        batch_size=1
     )
     return candidates
 
