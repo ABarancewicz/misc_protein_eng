@@ -7,6 +7,10 @@ from Bio.SeqUtils import seq1
 from chai_lab.chai1 import run_inference
 import sys
 import os
+import torch
+
+device = torch.device("cuda:1")
+torch.cuda.set_device(device)  # Set default device
 
 ### Script to run Chai prediction on directory of pdbs
 # Usage: chai_pdb_dir.py <pdb_dir> <output_dir> <processed_dir>
