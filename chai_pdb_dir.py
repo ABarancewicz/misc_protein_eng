@@ -9,7 +9,7 @@ import sys
 import os
 import torch
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "1"
+
 
 ### Script to run Chai prediction on directory of pdbs
 # Usage: chai_pdb_dir.py <pdb_dir> <output_dir> <processed_dir>
@@ -18,7 +18,11 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 # processed_dir: move processed pdbs to here
 # scores saved in results.txt
 
-# Note: Currently using cuda device 1
+# Note: Currently using cuda device 0
+
+#os.environ["CUDA_VISIBLE_DEVICES"] = "1"
+
+
 # Note: Currently using msa server
 
 
